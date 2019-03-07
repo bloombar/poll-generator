@@ -19,9 +19,21 @@
     "css"
   ],
   "author": "Foo Barstein",
-  "license": "GPL-3.0-or-later",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/bloombar/poll-generator/issues"
   },
-  "homepage": "https://github.com/bloombar/poll-generator#readme"
+  "homepage": "https://github.com/bloombar/poll-generator#readme",
+  "dependencies": {
+    "concurrently": "^3.5.1",
+    "fs-extra": "^4.0.2",
+    "live-server": "^1.2.0",
+    "markdown-it": "^8.4.0",
+    "nodemon": "^1.12.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build-pages": "node ./build_scripts/builder.js",                           
+    "start": "concurrently --kill-others \"nodemon -e js,json,css,md -i build -x \\\"npm run build-pages\\\"\" \"live-server ./build\""
+  }
 }
