@@ -1,0 +1,27 @@
+{
+  "name": "poll-generator",
+  "version": "0.0.1",
+  "description": "Quickly generate a poll using Firebase Firestore for data storage",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bloombar/poll-generator.git"
+  },
+  "keywords": [
+    "poll",
+    "firebase",
+    "firestore",
+    "static",
+    "html",
+    "css"
+  ],
+  "author": "Foo Barstein",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/bloombar/poll-generator/issues"
+  },
+  "homepage": "https://github.com/bloombar/poll-generator#readme"
+}
