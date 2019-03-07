@@ -4,7 +4,8 @@
   "description": "Quickly generate a poll using Firebase Firestore for data storage",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build-pages": "node ./build_scripts/builder.js",
+    "start": "concurrently --kill-others \"nodemon -e js,json,css,md -i build -x \\\"npm run build-pages\\\"\" \"live-server ./build\""
   },
   "repository": {
     "type": "git",
@@ -31,9 +32,5 @@
     "markdown-it": "^8.4.0",
     "nodemon": "^1.12.1"
   },
-  "devDependencies": {},
-  "scripts": {
-    "build-pages": "node ./build_scripts/builder.js",                           
-    "start": "concurrently --kill-others \"nodemon -e js,json,css,md -i build -x \\\"npm run build-pages\\\"\" \"live-server ./build\""
-  }
+  "devDependencies": {}
 }
